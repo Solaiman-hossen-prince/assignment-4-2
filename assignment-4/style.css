@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+}
+
+.top-image {
+  height: 30px;
+  width: 100px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.hero-image {
+  height: 250px;
+  min-width: 100%;
+  background: url("./images/page-title.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.center-div {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+}
+
+.center-div p {
+  color: rgb(212, 206, 206);
+  font-size: 12px;
+}
+
+/* ================ Header end =================== */
+
+
+/* ================ Search box start =================== */
+
+.search-section {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-box {
+  height: 40px;
+  width: 60%;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-box input {
+  height: 100%;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding-left: 10px;
+  background-color: transparent;
+}
+
+.search-icon {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgb(248, 221, 83);
+}
+
+.search-box i {
+  font-size: 22px;
+  color: white;
+}
+
+.recipe-hading {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ================ Search box end =================== */
+
+/* ================ Card start =================== */
+
+.card-section {
+  width: 100%;
+  min-height: 600px;
+  margin-top: 20px;
+}
+
+.card-containers {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center; 
+
+}
+
+
+
+.card-container {
+  margin-bottom: 1rem;
+  width: 250px;
+}
+
+.card-1 {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2), 0 9px 20px rgba(0, 0, 0, 0.19);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 10px;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.card-text h4 {
+  margin: 10px 0 5px;
+}
+
+.card-text p {
+  font-size: 12px;
+  color: #444;
+}
+
+.card-text a {
+  text-decoration: none;
+}
+
+.card-text button {
+  margin-top: 10px;
+  width: 50%;
+  padding: 7px;
+  background-color: rgb(228, 185, 56);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 123px;
+}
+
+.card-text button:hover {
+  background-color: rgb(232, 149, 25);
+  color: black;
+}
+
+.hide {
+  display: none;
+}
+
+/* ================ Card end =================== */
+
+/* ================ Footer start =================== */
+
+footer {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.social-icons i {
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.no-data h1 {
+  color: red;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+/* ================ Footer end =================== */
+
+/* ================ Modal start =================== */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+  height: 90%;
+  overflow-y: auto;
+  text-align: center;
+  position: fixed;
+  
+}
+
+.modal-content img {
+  width: 80%;
+  height: 70%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #333;
+  text-align: justify;
+}
+
+.close-btn {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color:rgb(249, 247, 247);
+  text-align: right;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f2cb55;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+/* ================ Modal end =================== */
+
+
+/* ================ Scrollup button start =================== */
+#scrollUpBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background-color: #e4b938;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollUpBtn:hover {
+  background-color: #e89519;
+  transform: scale(1.1);
+}
+/* ================ Scrollup button end =================== */
